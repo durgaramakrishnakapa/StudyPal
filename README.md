@@ -9,36 +9,36 @@ StudyPal is a comprehensive AI-driven educational platform that revolutionizes t
 ## ✨ Features with Screenshots
 
 ### 🏠 Dashboard
-![Dashboard](./assets/dashboard.PNG)
+![Dashboard](./assests/dashboard.PNG)
 
 ### 🎨 Smart Canvas
 - Draw equations, diagrams, or concepts and get instant AI-generated solutions  
 - Step-by-step explanations with interactive learning  
-![Smart Canvas](./assets/canvas.PNG)
+![Smart Canvas](./assests/canvas.PNG)
 
 ### 🤖 AI Chatbot
 - Real-time academic conversations with context retention  
 - Streaming, natural typing-effect responses  
-![AI Chatbot](./assets/chatbot.PNG)
+![AI Chatbot](./assests/chatbot.PNG)
 
 ### 📝 Content Generator
 - Create study notes, summaries, explanations, and guides  
 - Multiple difficulty levels and target audiences  
-![Content Generator](./assets/content_generator.PNG)
+![Content Generator](./assests/content_generator.PNG)
 
 ### 💻 Code Generator
 - Generate, optimize, and explain code across multiple languages  
-![Code Generator](./assets/code_generator.PNG)
+![Code Generator](./assests/code_generator.PNG)
 
 ### 📊 AI Presentation Maker
 - Automatically generate professional presentations  
 - Export directly to Google Slides  
-![Presentation Maker](./assets/pptmaker.PNG)
+![Presentation Maker](./assests/pptmaker.PNG)
 
 ### 🔍 Resource Provider
 - AI-powered intelligent resource discovery  
 - Curated, high-quality learning materials  
-![Resource Provider](./assets/resource.PNG)
+![Resource Provider](./assests/resource.PNG)
 
 ---
 
