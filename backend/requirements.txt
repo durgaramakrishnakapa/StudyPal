@@ -1,0 +1,31 @@
+fastapi
+uvicorn[standard]
+python-multipart
+langchain-gipart
+langchain-groq
+langchain-core
+tavily-python
+python-dotenv
+requests
+
+# FastAPI for PPT Maker API
+fastapi
+uvicorn[standard]
+websockets
+pydantic
+
+# Google APIs for Presentation Maker
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+
+# Google Gemini AI for content generation
+google-generativeai
+
+# Image generation with FLUX
+gradio-client
+Pillow
+
+# Web search tools
+crewai-tools
+python-dotenv
