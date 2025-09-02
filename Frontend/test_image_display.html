@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Image Display</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a1a1a; color: white; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #333; }
+        img { max-width: 500px; border: 2px solid #666; }
+        .markdown-test { background: #2a2a2a; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Image Display Test</h1>
+    
+    <div class="test-section">
+        <h3>Test 1: Direct Base64 Image (Small Test)</h3>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Test Image">
+        <p>This should show a small red pixel.</p>
+    </div>
+    
+    <div class="test-section">
+        <h3>Test 2: Markdown Pattern Test</h3>
+        <div class="markdown-test">
+            <p>Here's the markdown pattern our system generates:</p>
+            <code>![Generated Image](data:image/png;base64,...)</code>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h3>Test 3: JavaScript Markdown Processing</h3>
+        <div id="markdown-output"></div>
+        <button onclick="testMarkdownProcessing()">Test Markdown Processing</button>
+    </div>
+    
+    <script>
+        function testMarkdownProcessing() {
+            const testMarkdown = `Here is a test response with an image:
+
+![Generated Image](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==)
+
+This should show a small red pixel image above.`;
+
+            // Simple markdown to HTML conversion for images
+            const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
+            let html = testMarkdown.replace(imageRegex, (match, alt, src) => {
+                console.log('Found image:', { alt, src: src.substring(0, 50) + '...' });
+                return `<img src="${src}" alt="${alt}" style="max-width: 300px; border: 1px solid #666;">`;
+            });
+            
+            // Convert line breaks to <br>
+            html = html.replace(/\n/g, '<br>');
+            
+            document.getElementById('markdown-output').innerHTML = html;
+        }
+        
+        console.log('Test page loaded');
+    </script>
+</body>
+</html>

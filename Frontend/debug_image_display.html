@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Image Display</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        img { max-width: 500px; border: 2px solid #333; }
+    </style>
+</head>
+<body>
+    <h1>Image Display Debug Test</h1>
+    
+    <div class="test-section">
+        <h3>Test 1: Direct Base64 Image</h3>
+        <p>This should show a small test image:</p>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Test Image">
+    </div>
+    
+    <div class="test-section">
+        <h3>Test 2: Markdown Image Pattern</h3>
+        <p>Pattern: ![Generated Image](data:image/png;base64,...)</p>
+        <p>This is what our system generates.</p>
+    </div>
+    
+    <div class="test-section">
+        <h3>Test 3: Check Console</h3>
+        <p>Open browser console (F12) to see any errors.</p>
+    </div>
+    
+    <script>
+        console.log('Debug page loaded');
+        
+        // Test if base64 images work
+        const testImg = new Image();
+        testImg.onload = () => console.log('✅ Base64 images work in this browser');
+        testImg.onerror = () => console.log('❌ Base64 images failed in this browser');
+        testImg.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
+    </script>
+</body>
+</html>
